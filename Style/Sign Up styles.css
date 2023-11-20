@@ -1,0 +1,63 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('metrobus.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.signup-form {
+    width: 300px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 85px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="date"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.signup-form .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.signup-form .form-row > input,
+.signup-form .select-wrapper {
+    width: 48%;
+}
+
+.signup-form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #0069E3;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}

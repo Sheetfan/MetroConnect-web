@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Style/Sign Up styles.css">
+</head>
+<body>
+<div class="signup-form">
+    <form action="" method="post">
+        <h2>Sign Up</h2>
+        <div class="form-row">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+        </div>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="tel" name="contact_number" placeholder="Contact Number" required>
+        <div class="form-row">
+            <input type="date" name="dob" placeholder="Date of Birth" required>
+            <div class="select-wrapper">
+                <select name="commuter_type" required>
+                    <option value="" disabled selected hidden>Commuter Type</option>
+                    <option value="Adults">Adult</option>
+                    <option value="Scholar">Scholar</option>
+                    <option value="pensioners">Pensioners</option>
+                    <option value="Disabled">Disabled</option>
+                    <option value="Children">Children (3 to 12)</option>
+                </select>
+            </div>
+        </div>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Password Again" required>
+        <button type="submit">Sign up</button>
+    </form>
+</div>
+</body>
+</html>
