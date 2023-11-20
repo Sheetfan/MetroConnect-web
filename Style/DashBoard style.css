@@ -1,0 +1,85 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: Inter, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    height: 100vh; /* Full height */
+    padding: 20px;
+}
+
+.sidebar h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.zone-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-gap: 20px;
+}
+
+.zone {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.zone h3 {
+    margin-bottom: 10px;
+}
+
+.stored-value {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    height: 40px; /* Set the size of your avatar image */
+}
