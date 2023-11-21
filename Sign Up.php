@@ -9,13 +9,23 @@
 </head>
 <body>
 <div class="signup-form">
-    <form action="" method="post">
+    <form action="Server/Sign Up.php" method="POST">
         <h2>Sign Up</h2>
         <div class="form-row">
             <input type="text" name="first_name" placeholder="First Name" required>
             <input type="text" name="last_name" placeholder="Last Name" required>
         </div>
-        <input type="email" name="email" placeholder="Email address" required>
+        <div class="form-row">
+            <input type="email" name="email" placeholder="Email address" required>
+            <div class="select-wrapper">
+                <select name="gender" required>
+                    <option value="" selected disabled hidden>Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
         <input type="tel" name="contact_number" placeholder="Contact Number" required>
         <div class="form-row">
             <input type="date" name="dob" placeholder="Date of Birth" required>
@@ -30,8 +40,8 @@
                 </select>
             </div>
         </div>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="password" name="confirm_password" placeholder="Password Again" required>
+        <!-- <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Password Again" required> -->
         <button type="submit">Sign up</button>
     </form>
 </div>
