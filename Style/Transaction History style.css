@@ -52,6 +52,8 @@ header {
     margin-bottom: 20px;
 }
 
+
+
 .transaction-history .transaction-record {
     display: flex;
     justify-content: space-between;
@@ -83,4 +85,19 @@ header {
 .user-info img {
     border-radius: 50%;
     height: 40px;
+}
+
+.l{
+    padding-left: 10px ;
+    padding-right: 30px ;
+   
+    vertical-align: left;
+   text-align: center;
+   float: right;
+   color: black;
+}
+
+.l2{
+    padding-left: 10px ;
+
 }

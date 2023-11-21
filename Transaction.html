@@ -47,8 +47,9 @@
         </header>
         <div class="transaction-filters">
             <select id="transaction-filter">
-                <option value="trip-history">Trip History</option>
-                <option value="transaction-history">Transaction History</option>
+                <option value="" aria-placeholder="Select Filter"></option>
+                <option value="Transaction.html">Trip History</option>
+                <option value="Transaction-history.html">Transaction History</option>
                 <!-- Additional filter options -->
             </select>
         </div>
@@ -62,5 +63,20 @@
             <!-- ... other transactions ... -->
         </div>
     </div>
+    <script>
+        // Get the transaction filter dropdown element
+const transactionFilter = document.getElementById('transaction-filter');
+
+// Add change event listener to the dropdown
+transactionFilter.addEventListener('change', function(event) {
+    const selectedOption = transactionFilter.value;
+    
+    // Check if an option is selected and navigate to the corresponding page
+    if (selectedOption) {
+        window.location.href = selectedOption; // Redirect to the selected page
+    }
+});
+    </script>
+
 </body>
 </html>
