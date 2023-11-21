@@ -41,18 +41,28 @@
         <header>
             <h2>Transactions</h2>
             <div class="user-info">
-                <span>Buzwane Mahlangu</span>
+                <span>Commuter Name</span>
                 <i class="fa fa-user" aria-hidden="true"></i>
             </div>
         </header>
-        <div class="filter">
-            <select id="history-filter">
-                <option value="transaction-history">Transaction History</option>
+        <div class="transaction-filters">
+            <select id="transaction-filter">
+                <option value="" aria-placeholder="Select Filter"></option>
+                <option value="Transaction.html">Trip History</option>
+                <option value="Transaction-history.html">Transaction History</option>
                 <!-- Additional filter options -->
             </select>
+
+            <select class="l">
+                <option value="Last 3 Months">Last 3 Months</option>
+                <option value="Last 6 Months">Last 6 Months</option>
+                <option value="2023">2023</option>
+            </select>
         </div>
+
         <div class="transaction-history">
             <!-- Repeat this block for each transaction record -->
+            <br>
             <div class="transaction-record">
                 <div class="transaction-details">
                     <h3>Zone 1 - 52 trips</h3>
@@ -64,7 +74,70 @@
                 </div>
             </div>
             <!-- ... other transaction records ... -->
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
+            </div>
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
+            </div>
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
+            </div>
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
+            </div>
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
         </div>
     </div>
+    <script>
+        // Get the transaction filter dropdown element
+const transactionFilter = document.getElementById('transaction-filter');
+
+// Add change event listener to the dropdown
+transactionFilter.addEventListener('change', function(event) {
+    const selectedOption = transactionFilter.value;
+    
+    // Check if an option is selected and navigate to the corresponding page
+    if (selectedOption) {
+        window.location.href = selectedOption; // Redirect to the selected page
+    }
+});
+    </script>
 </body>
 </html>
