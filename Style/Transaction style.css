@@ -1,0 +1,88 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li.active a {
+    background-color: #007bff;
+    color: white;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.transaction-filters {
+    margin-bottom: 20px;
+}
+
+.transaction-list {
+    background: #fff;
+    padding: 20px;
+}
+
+.transaction-item {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.transaction-item h3 {
+    margin: 0;
+}
+
+.transaction-item .trips {
+    background-color: #0056b3;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-info img {
+    border-radius: 50%;
+    height: 40px;
+}

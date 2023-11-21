@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/Transaction History style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>MetroConnect</h1>
+        <ul>
+            <li>
+                <a href="DashBoard.html">
+                    <i class="fa fa-home" aria-hidden="true"></i> 
+                    Dashboard
+                </a>
+            </li>
+            <li class="active">
+                <a href="Transactions.html">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    Transactions
+                </a>
+            </li>
+            <li>
+                <a href="Notifications.html">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    Notifications
+                </a>
+            </li>
+            <li>
+                <a href="logout.html">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>Transactions</h2>
+            <div class="user-info">
+                <span>Buzwane Mahlangu</span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="filter">
+            <select id="history-filter">
+                <option value="transaction-history">Transaction History</option>
+                <!-- Additional filter options -->
+            </select>
+        </div>
+        <div class="transaction-history">
+            <!-- Repeat this block for each transaction record -->
+            <div class="transaction-record">
+                <div class="transaction-details">
+                    <h3>Zone 1 - 52 trips</h3>
+                    <p>2020/10/05 22:00</p>
+                    <p>Successful</p>
+                </div>
+                <div class="transaction-amount">
+                    <p>R300</p>
+                </div>
+            </div>
+            <!-- ... other transaction records ... -->
+        </div>
+    </div>
+</body>
+</html>

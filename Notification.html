@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/Notification style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>MetroConnect</h1>
+        <ul>
+            <li>
+                <a href="Dashboard.html">
+                    <i class="fa fa-home" aria-hidden="true"></i> 
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="Transaction.html">
+                    <i class="fa fa-exchange" aria-hidden="true"></i>
+                    Transactions
+                </a>
+            </li>
+            <li class="active">
+                <a href="Notifications.html">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    Notifications
+                </a>
+            </li>
+            <li>
+                <a href="logout.html">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>Notifications</h2>
+            <div class="user-info">
+                <span>Buzwane Mahlangu</span>
+                <select id="notification-filter">
+                    <option value="all">All</option>
+                    <!-- Additional filter options -->
+                </select>
+            </div>
+        </header>
+        <div class="notification-list">
+            <!-- Repeat this block for each notification -->
+            <div class="notification-item error">
+                <h3>Error</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <span class="date">2020/06/23</span>
+            </div>
+            <!-- ... other notifications ... -->
+        </div>
+    </div>
+</body>
+</html>
