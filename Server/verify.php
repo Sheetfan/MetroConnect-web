@@ -1,7 +1,6 @@
 <?php
     if(isset($_POST['email']) && isset($_POST['password'])){
-        // Database connection parameter
-
+        include("DB_connect.php");
         //* You should change the informaction depending on your database
         $servername = "localhost";
         $username = "root";
