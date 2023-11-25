@@ -1,4 +1,4 @@
-<?
+<?php
 // Database connection parameter
 
     //* You should change the informaction depending on your database
