@@ -5,8 +5,8 @@
         //* You should change the informaction depending on your database
         $servername = "localhost";
         $username = "root";
-        $password = "";
-        $dbname = "metrobus";
+        $password = "1234";
+        $dbname = "Metroconnect";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 

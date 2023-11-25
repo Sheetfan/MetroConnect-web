@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="login-container">
-            <form action="php/verify.php" method="post">
+            <form action="Server/verify.php" method="post">
                 <h2>Commuter Login</h2>
                 
                 <div class="form-group">

@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+
+.sidebar {
+    /* Styles for your sidebar */
+    width: 250px;
+    background: #f4f4f4;
+    min-height: 100vh;
+    float: left;
+}
+
+.price-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.price-controls {
+    /* Styles for form controls if you add them */
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.price-table th, 
+.price-table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.price-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-add {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
