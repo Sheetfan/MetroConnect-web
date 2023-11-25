@@ -14,10 +14,9 @@ notifications.addEventListener("click", () => {
     loadData("notification");
 });
 
-
 function loadData(option) {
 	// Create a new fetch request with the selected option
-	fetch(`Server/${option}.php`)
+	fetch("Server/dashboard.php")
 		.then((response) => {
 			console.log("Request URL:", response.url);
 			return response.text();
