@@ -1,17 +1,4 @@
 <?php
-    //! I am not using include("DB_connect.php") because it breaks everything 
-    // Database connection parameter
-    // $servername = "localhost";
-    // $username = "root";
-    // $password = "";
-    // $dbname = "metrobus";
-
-    // $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // if ($conn->connect_error) {
-    //     die("Connection failed: " . $conn->connect_error);
-    // }
-
     include "DB_connect.php";
     // Query to fetch data from the database based on the selected option
     //TODO Make it connect to the in page 
