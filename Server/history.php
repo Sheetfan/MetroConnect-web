@@ -2,20 +2,46 @@
 include "DB_connect.php";
 // Query to fetch data from the database based on the selected option
 
-$option = isset($_GET['option']) ? $_GET['option'] : '';
-$sql = ""; 
+$option1 = isset($_GET["option1"]) ? $_GET["option1"] : '';
+$option2 = isset($_GET["option2"]) ? $_GET["option2"] : "";
+$sql = "";
 // Use a switch statement or if conditions to handle different options
-switch ($option) {
+switch ($option1) {
     case 'transactions':
         // Query to fetch data for option 1
-        $sql = "SELECT * FROM transactionhistory WHERE User_Id = 21";
-        break;
 
+        switch($option2){
+            case "none":
+                $sql = "SELECT * FROM transactionhistory WHERE User_Id = 21";
+                break;
+            case "3 months":
+                $sql = "SELECT * FROM TransactionHistory WHERE Timestamp >= CURDATE() - INTERVAL 3 MONTH";
+                break;
+            case "6 months";
+                $sql = "SELECT * FROM TransactionHistory WHERE Timestamp >= CURDATE() - INTERVAL 6 MONTH";
+                break;
+            default:
+                $sql = "SELECT * FROM TransactionHistory WHERE YEAR(Timestamp) = $option2";
+                break;
+        }
+        break;
     case 'trips':
         // Query to fetch data for option 2
-        $sql = "SELECT * FROM tripdata WHERE User_Id = 21";
-        break;
+        switch ($option2) {
+            case "none":
+                $sql = "SELECT * FROM tripdata WHERE User_Id = 21";
+                break;
+            case "3 months":
 
+                $sql = "SELECT * FROM tripdata WHERE Timestamp >= CURDATE() - INTERVAL 3 MONTH";
+                break;
+            case "6 months";
+                $sql = "SELECT * FROM tripdata WHERE Timestamp >= CURDATE() - INTERVAL 6 MONTH";
+                break;
+            default:
+                $sql = "SELECT * FROM tripdata WHERE YEAR(Timestamp) = $option2";
+                break;
+        }
 }
 
 $result = $conn->query($sql);
@@ -26,7 +52,7 @@ if ($result->num_rows > 0) {
         // echo "<p>{$row['column1']} - {$row['column2']} - {$row['column3']}</p>";
 
         
-        if($option === "transactions"){
+        if($option1 === "transactions"){
             echo '<div class="transaction-record">';
                 echo '<div class="transaction-details">';
                     echo "<h3>Zone {$row["Zone"]} - {$row["Type_Of_Fare"]}</h3>";
@@ -43,7 +69,7 @@ if ($result->num_rows > 0) {
                 echo '<div class="transaction-item">';
                     echo "<h3>{$row["Routes"]}</h3>";
                     echo "<p>{$row["Timestamp"]}</p>";
-                    if($row["Amount"] === 0){
+                    if($row["Amount"] == 0){
                         echo '<span class="trips">Trips</span>';
                     }
                     else{
