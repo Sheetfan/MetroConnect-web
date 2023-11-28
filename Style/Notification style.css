@@ -51,6 +51,7 @@ header {
 .user-info {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .user-info select {
@@ -97,4 +98,22 @@ header {
 
 .notification-item.success {
     border-color: #23d160;
+}
+
+.transaction-filters {
+    margin-bottom: 20px;
+}
+
+.l{
+   
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    vertical-align: left;
+   text-align: center;
+   float: right;
+   color: black;
+}
+
+.user-info span {
+    margin-right: 10px;
 }

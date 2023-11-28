@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/Price.css">
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Sidebar content -->
+        <ul>
+            <li><a href="Admin Dashboard.html">Dashboard</a></li>
+            <li><a href="Adults.html">Adults</a></li>
+            <li><a href="Scholar.html">Scholars</a></li>
+            <li><a href="Pensioners.html">Pensioners</a></li>
+            <li ><a href="Disabled.html">Disabled</a></li>
+            <li><a href="Children.html">Children (3 and 12)</a></li>
+            <li class="active"><a href="Price.html">Price</a></li>
+            <li><a href="logout.php">Log out</a></li>
+        </ul>
+    </div>
+    <div class="price-content">
+        <h1>Price</h1>
+        <div class="price-controls">
+            <!-- Add form controls here if necessary -->
+        </div>
+        <table class="price-table">
+            <tr>
+                <th>Zone</th>
+                <th>Commuter type</th>
+                <th>Fare type</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Adults</td>
+                <td>Stored value</td>
+                <td>13.09</td>
+            </tr>
+            <!-- More rows as needed -->
+        </table>
+        <div class="price-actions">
+            <button class="btn-update">Update</button>
+            <button class="btn-add">Add</button>
+            <button class="btn-delete">Delete</button>
+        </div>
+    </div>
+</body>
+</html>

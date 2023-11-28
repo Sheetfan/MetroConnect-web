@@ -1,0 +1,96 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a.active,
+.sidebar ul li a:hover {
+    background-color: #0069E3;
+    color: #ffffff;
+}
+
+.main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 40px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.payment-methods-list {
+    border-top: 1px solid #ccc;
+}
+
+.payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.payment-method span {
+    display: block;
+    margin-right: 10px;
+}
+
+.payment-method button {
+    padding: 10px 20px;
+    background-color: #0069E3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payment-method button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar ul li a {
+        padding: 10px 15px;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .payment-method {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .payment-method button {
+        margin-top: 10px;
+    }
+}
