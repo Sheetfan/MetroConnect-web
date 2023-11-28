@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style/Notification style.css">
 </head>
 <body>
     <div class="sidebar">
-        <h1>MetroConnect</h1>
+        <h2>MetroConnect</h2>
         <ul>
             <li>
                 <a href="Dashboard.html">
@@ -41,14 +42,24 @@
         <header>
             <h2>Notifications</h2>
             <div class="user-info">
-                <span>Buzwane Mahlangu</span>
-                <i class="fa fa-user" aria-hidden="true"></i>                
-            </div>
+                <span>Commuter Name </span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                
+            </div>  
         </header>
-        <select id="notification-filter">
-            <option value="all">All</option>
-            <!-- Additional filter options -->
-        </select>
+        
+        <div>
+            <select class="l">
+                <option value="Last 3 Months">Last 3 Months</option>
+                <option value="Last 6 Months">Last 6 Months</option>
+                <option value="2023">2023</option>
+                <!-- Additional filter options -->
+            </select>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="notification-list">
             <!-- Repeat this block for each notification -->
             <div class="notification-item error">
@@ -56,12 +67,32 @@
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <span class="date">2020/06/23</span>
             </div>
+            <!-- ... other notifications ... -->
             <div class="notification-item warning">
+                <h3>Warning</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <span class="date">2020/06/23</span>
+            </div>
+            <div class="notification-item error">
                 <h3>Error</h3>
                 <p>Lorem ipsum dolor sit amet consectetur.</p>
                 <span class="date">2020/06/23</span>
             </div>
-            <!-- ... other notifications ... -->
+            <div class="notification-item announcement">
+                <h3>Announcement</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <span class="date">2020/06/23</span>
+            </div>
+            <div class="notification-item error">
+                <h3>Error</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <span class="date">2020/06/23</span>
+            </div>
+            <div class="notification-item success">
+                <h3>Success</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <span class="date">2020/06/23</span>
+            </div>
         </div>
     </div>
 </body>

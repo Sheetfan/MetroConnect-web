@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Stored Value</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/Buy Stored value.css">
+</head>
+<body>
+    <div class="buy-container">
+        <div class="back-arrow">
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+        </div>
+        <div class="dropdown">
+            <select id="stored-value" name="stored_value">
+                <option value="stored_value">Stored Value</option>
+                <!-- Other options if necessary -->
+            </select>
+        </div>
+        <div class="input-group">
+            <input type="text" placeholder="Enter amount">
+            <button type="button" class="next-btn">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // Script to go back or handle the dropdown changes if needed
+        document.querySelector('.back-arrow').onclick = function() {
+            window.history.back();
+        };
+    </script>
+</body>
+</html>

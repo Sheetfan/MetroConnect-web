@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style/Admin DashBoard style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>MetroConnect Admin</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="Adults.html">Adults</a></li>
+                <li><a href="Scholar.html">Scholars</a></li>
+                <li><a href="Pensioners.html">Pensioners</a></li>
+                <li><a href="Disabled.html">Disabled</a></li>
+                <li><a href="Children.html">Children (3 and 12)</a></li>
+                <li><a href="Price.html">Price</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="admin-content">
+        <header class="admin-header">
+            <div class="admin-profile">
+                <span>Admin Name</span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+        </header>
+        <div class="admin-dashboard">
+            <div class="stat-item" id="registered-adults">
+                <h3>Total Number of Registered Adults</h3>
+                <div class="stat-bar" style="width: 50%;"></div>
+            </div>
+            <div class="stat-item" id="registered-scholars">
+                <h3>Total Number of Registered Scholars</h3>
+                <div class="stat-bar" style="width: 30%;"></div>
+            </div>
+            <div class="stat-item" id="registered-pensioners">
+                <h3>Total Number of Pensioners</h3>
+                <div class="stat-bar" style="width: 70%;"></div>
+            </div>
+            <div class="stat-item" id="registered-disabled">
+                <h3>Total Number of Disabled</h3>
+                <div class="stat-bar" style="width: 20%;"></div>
+            </div>
+            <div class="stat-item" id="registered-children">
+                <h3>Total Number of Children between 3 and 12</h3>
+                <div class="stat-bar" style="width: 80%;"></div>
+            </div>
+        </div>
+    </main>
+    <script src="admin_dashboard.js"></script>
+</body>
+</html>
