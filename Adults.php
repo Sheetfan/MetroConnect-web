@@ -135,6 +135,6 @@
 </div>
     <script src="Edit_feature.js"></script>
     <script src="history_handler.js"></script>
-    <script src="Delete_commuter.js"></script>
+    <script src="Delete_commuters.js"></script>
 </body>
 </html>

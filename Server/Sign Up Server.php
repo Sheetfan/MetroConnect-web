@@ -21,7 +21,7 @@ include 'DB_connect.php';
         //Validate last name
         $lastName=trim($_POST['last_name']);
         if(empty($lastName)){
-            $lastNameErr ='Please enter your first name.';
+            $lastNameErr ='Please enter your last name.';
         }else if(!ctype_alpha(str_replace(' ','', $lastName))){
             $lastNameErr = 'Last Name must contain only letters';
         }
@@ -66,9 +66,9 @@ include 'DB_connect.php';
         //Validate Contact Number
         if(empty(trim($_POST["contact_number"]))){
             $contactNumberErr = 'Contact number is required.';
-        }else{
+        } else {
             $contactNumber = trim($_POST["contact_number"]);
-            if(!preg_match('/^(\+27|0)[0-9]{9}$/', $contactNumber) && !preg_match('/^\+27(\s)?[0-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{4}$/', $contactNumber)){
+            if(!preg_match('/^(\+27|0)[0-9]{9}$|^\+27\s[0-9]{2}\s[0-9]{3}\s[0-9]{4}$/', $contactNumber)){
                 $contactNumberErr = 'Invalid South African contact number format.';
             }
         }
@@ -130,7 +130,7 @@ include 'DB_connect.php';
             }
             return $password;
         }
-        
+
         $password = password_hash(generateRandomPassword(), PASSWORD_DEFAULT);
 
         if(empty($firstNameErr) && empty($lastNameErr) && empty($emailErr) && empty($genderErr) && empty($contactNumberErr) && empty($dobErr) && empty($commuterTypeErr)){
