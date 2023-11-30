@@ -43,7 +43,7 @@
             <h2 class="heading-name">Dashboard</h2>
             <a href="Personal Info.html">
                 <div class="user-info">
-                    <span><?php $_SESSION["userId"]?></span>
+                    <span><?php echo $_SESSION["userInfo"]["First_Name"]." ". $_SESSION["userInfo"]["Last_Name"]?></span>
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
             </a>

@@ -1,9 +1,11 @@
 <?php
 include "DB_connect.php";
 
+session_start();
 $option1 = isset($_GET["option1"]) ? $_GET["option1"] : '';
 
-$sql = "SELECT * FROM notifications WHERE User_Id = 21";
+$userId = $_SESSION["userInfo"]["User_Id"];
+$sql = "SELECT * FROM notifications WHERE User_Id = $userId";
 $result = $conn->query($sql);
 
 // Check if there is data

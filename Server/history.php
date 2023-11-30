@@ -1,10 +1,12 @@
 <?php
 include "DB_connect.php";
-// Query to fetch data from the database based on the selected option
 
+session_start();
 $option1 = isset($_GET["option1"]) ? $_GET["option1"] : '';
 $option2 = isset($_GET["option2"]) ? $_GET["option2"] : "";
 $sql = "";
+
+$userId = $_SESSION["userInfo"]["User_Id"];
 // Use a switch statement or if conditions to handle different options
 switch ($option1) {
     case 'transactions':
@@ -12,16 +14,16 @@ switch ($option1) {
 
         switch($option2){
             case "none":
-                $sql = "SELECT * FROM transactionhistory WHERE User_Id = 21";
+                $sql = "SELECT * FROM transactionhistory WHERE User_Id = $userId";
                 break;
             case "3 months":
-                $sql = "SELECT * FROM TransactionHistory WHERE Timestamp >= CURDATE() - INTERVAL 3 MONTH";
+                $sql = "SELECT * FROM TransactionHistory WHERE User_Id = $userId AND Timestamp >= CURDATE() - INTERVAL 3 MONTH";
                 break;
             case "6 months";
-                $sql = "SELECT * FROM TransactionHistory WHERE Timestamp >= CURDATE() - INTERVAL 6 MONTH";
+                $sql = "SELECT * FROM TransactionHistory WHERE User_Id = $userId AND Timestamp >= CURDATE() - INTERVAL 6 MONTH";
                 break;
             default:
-                $sql = "SELECT * FROM TransactionHistory WHERE YEAR(Timestamp) = $option2";
+                $sql = "SELECT * FROM TransactionHistory WHERE User_Id = $userId AND YEAR(Timestamp) = $option2";
                 break;
         }
         break;
@@ -29,17 +31,17 @@ switch ($option1) {
         // Query to fetch data for option 2
         switch ($option2) {
             case "none":
-                $sql = "SELECT * FROM tripdata WHERE User_Id = 21";
+                $sql = "SELECT * FROM tripdata WHERE User_Id = $userId";
                 break;
             case "3 months":
 
-                $sql = "SELECT * FROM tripdata WHERE Timestamp >= CURDATE() - INTERVAL 3 MONTH";
+                $sql = "SELECT * FROM tripdata WHERE $userId AND Timestamp >= CURDATE() - INTERVAL 3 MONTH";
                 break;
             case "6 months";
-                $sql = "SELECT * FROM tripdata WHERE Timestamp >= CURDATE() - INTERVAL 6 MONTH";
+                $sql = "SELECT * FROM tripdata WHERE $userId AND Timestamp >= CURDATE() - INTERVAL 6 MONTH";
                 break;
             default:
-                $sql = "SELECT * FROM tripdata WHERE YEAR(Timestamp) = $option2";
+                $sql = "SELECT * FROM tripdata WHERE $userId AND YEAR(Timestamp) = $option2";
                 break;
         }
 }

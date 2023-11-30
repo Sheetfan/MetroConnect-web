@@ -6,7 +6,7 @@
     <title>Price Management</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Style/Price_Styless.css">
+    <link rel="stylesheet" href="Style/Price_Styles.css">
 </head>
 <body>
     <aside class="sidebar">

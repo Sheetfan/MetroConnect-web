@@ -1,21 +1,12 @@
 <?php
-session_start();
+
     if(isset($_POST['email']) && isset($_POST['password'])){
         include("DB_connect.php");
-        //* You should change the informaction depending on your database
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "metrobus";
-
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
 
         $email = $_POST['email'];
         $password =  $_POST['password'];
+        // $email = "alice.johnson@email.com";
+        // $password =  "mypassword";
 
         // this checks if the textbox are empty
         if(empty($email)|| empty($password)){
@@ -39,8 +30,12 @@ session_start();
 
         // this checks of the user exists
         if ($result->num_rows > 0) {
+            session_start();
+            $row = $result->fetch_array(MYSQLI_ASSOC);
+            $_SESSION["userInfo"] = $row;
+            //echo $_SESSION["userId"];
             header("Location: ..\main page.php");
-            $_SESSION["userId"] = $result;
+            
         } else {
             header("Location: ..\Commuter Login Page.php?error=invalid");
         }
