@@ -48,37 +48,45 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Fetch and display each record
+    echo '<div class = "history-container">';
     while ($row = $result->fetch_assoc()) {
-        // echo "<p>{$row['column1']} - {$row['column2']} - {$row['column3']}</p>";
 
-        
         if($option1 === "transactions"){
-            echo '<div class="transaction-record">';
-                echo '<div class="transaction-details">';
-                    echo "<h3>Zone {$row["Zone"]} - {$row["Type_Of_Fare"]}</h3>";
-                    echo "<p>{$row["Timestamp"]}</p>";
-                    echo "<p>{$row["Transaction_Status"]}</p>";
+            echo '<div class="history-card">';
+                echo '<div class="info">';
+                if($row["Zone"] == 0){
+                    echo '<div class="zone-info">' . "{$row["Type_Of_Fare"]}" . '</div>';
+                }
+                else{
+                    echo '<div class="zone-info">Zone'. "{$row["Zone"]}"." - " ."{$row["Type_Of_Fare"]}".'</div>';
+                }
+                    echo '<div class="history-timestamp">'."{$row["Timestamp"]}".'</div>';
+                    echo '<div>'."{$row["Transaction_Status"]}".'</div>';
                 echo "</div>";
-                echo '<div class="transaction-amount">';
-                    echo "<p>R{$row["Amount"]}</p>";
+                echo '<div class="history-amount">';
+                    echo "<div>R{$row["Amount"]}</div>";
                 echo "</div>";
             echo "</div>";
         }
         else{
-            echo '<div class="transaction-list">';
-                echo '<div class="transaction-item">';
-                    echo "<h3>{$row["Routes"]}</h3>";
-                    echo "<p>{$row["Timestamp"]}</p>";
-                    if($row["Amount"] == 0){
-                        echo '<span class="trips">Trips</span>';
-                    }
-                    else{
-                        echo '<span class="trips">' . "{$row["Amount"]}" . '</span>';
-                    }
+            echo '<div class="history-card">';
+                echo '<div class="info">';
+                    echo '<div class="zone-info">'."{$row["Routes"]}" . '</div>';
+                    echo '<div class="history-timestamp">' . "{$row["Timestamp"]}" . '</div>';
                 echo "</div>";
-            echo"</div>";
+                echo '<div class="history-amount">';
+                if($row["Amount"] == 0){
+                    echo "<div>R{$row["Amount"]}</div>";
+                }
+                else{
+                    echo "<div>Trip</div>";
+                }
+                    
+                echo "</div>";
+            echo "</div>";
         }
     }
+    echo "</div>";
 } else {
     echo "No records found";
 }

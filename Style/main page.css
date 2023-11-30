@@ -1,0 +1,224 @@
+:root{
+    --highlighted-background-colour:#0069E3;
+    --nav-colour-background-colour:#ffffff;
+    --text-colour:#000000;
+    --trans-colour:#00000080;
+    --notification-error-colour:#FF0000;
+    --notification-success-colour:#00AB1B;
+    --notification-warring-colour:#FF8A00;
+    --notification-announcement-colour: var(--highlighted-background-colour);
+
+    --smaller-size-par:12px;
+    --normal-size-par:16px;
+    --normal-size-title:24px;
+    --large-size-title:32px;
+    
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    font-family: Inter, sans-serif;
+    background: #e5e5e5;
+    overflow:hidden;
+}
+
+/* sidebar styling */
+.sidebar{
+    width: 250px;
+    background-color: var(--nav-colour-background-colour);
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar-header {
+    padding-bottom: 20px;
+}
+
+.sidebar h2 {
+    color: #333;
+    font-size:var(--normal-size-title);
+    margin-bottom: 20px;
+}
+.sidebar-nav ul {
+    list-style-type: none;
+}
+.sidebar-nav ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav ul li span {
+    color: #333;
+    display: block;
+    padding: 10px;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav ul li.active span,
+.sidebar-nav ul li span:hover {
+    background-color: #f4f4f4;
+    border-left-color:var(--highlighted-background-colour);
+}
+
+.main-content{
+    width: 100%;
+}
+
+/* header styling */
+header{
+    width: 100%;
+    height: 107px;
+    display: flex;
+    padding: 0px 50px;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.heading-name{
+    font-size: var(--large-size-title);
+}
+
+.user-info div{
+    margin: 10px;
+}
+
+.main-container{
+    padding: 20px 50px;
+}
+
+.top-compontents{
+    width: 100%;
+    padding: 0px 50px;
+
+}
+.deshboard-compontents {
+    font-size: var(--normal-size-par);
+}
+.top-compontents div span{
+    color: var(--highlighted-background-colour);
+}
+
+/* styling for zone cards */
+.zone-container{
+    width: 100%;
+    /* padding: 25px 50px; */
+    display: grid;
+    grid-template-columns: 25% auto auto auto;
+    gap: 10px 10px;
+    overflow-y: auto;
+}
+
+.zone-card{
+    font-size: var(--normal-size-title);
+    padding: 30px 30px;
+    background: var(--highlighted-background-colour);
+    color: var(--nav-colour-background-colour);
+}
+
+/* Styling for history page */
+
+.top-compontents-history{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.history-comboxbox{
+    padding: 10px 10px 10px 20px;
+}
+
+.date-combobox{
+    padding: 10px 10px 10px 20px;
+}
+
+.history-container{
+    width: 100%;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    overflow-y:auto;
+}
+    
+.history-card{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    background: var(--highlighted-background-colour);
+    color: var(--nav-colour-background-colour);
+    margin: 10px 0px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    font-size: var(--normal-size-par);
+    padding: 10px 0px;
+}
+.zone-info{
+    font-size: var(--normal-size-title);
+    font-weight: 600;
+}
+
+.history-timestamp{
+    font-weight: 600;
+}
+.history-amount{
+    font-size: var(--normal-size-title);
+}
+
+/* styling for notificatons */
+
+.top-compontents-notifications{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.notifications-container{
+    width: 100%;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    overflow-y:auto;
+}
+
+.notifications-container .card{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background:var(--nav-colour-background-colour);
+    margin: 10px 0px;
+}
+
+.error{
+    border-left: var(--notification-error-colour) 5px solid;
+}
+.warning{
+    border-left: var(--notification-warring-colour) 5px solid;
+}
+.success{
+    border-left: var(--notification-success-colour) 5px solid;
+}
+.announcement{
+    border-left: var(--notification-announcement-colour) 5px solid;
+}
+
+.notifications-container .type{
+    font-weight: 700;
+    font-size: var(--normal-size-title);
+}
+    

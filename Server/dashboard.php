@@ -12,20 +12,22 @@
 
     // Generate HTML based on the received data
         if ($data) {
+            echo '<div class="zone-container">';
             foreach ($data as $key => $value) {
                 if(!($key == "Tag_Id" || $key == "User_Id" || $key == "Stored_Value")){
-                    echo '<div class="zone">';
+                    echo '<div class="zone-card">';
                         echo "<h3>Zone ". substr($key, -1) . "</h3>";
                         echo "<p>" . "Trips:" . $value . "</p>";
                     echo '</div>';
                 }
                 else if($key == "Stored_Value"){
-                    echo '<div class="stored-value">';
+                    echo '<div class="zone-card">';
                         echo "<h3>" . "stored value" . "</h3>";
                         echo "<p>" . "Value:R" . $value . "</p>";
                     echo '</div>';
                 }
             }
+            echo '</div>';
         } else {
             echo "No rows found.";
         }

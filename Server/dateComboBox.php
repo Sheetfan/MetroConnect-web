@@ -13,6 +13,9 @@
             // Query to fetch data for option 2
             $sql = "SELECT DISTINCT YEAR(Timestamp) AS year FROM tripdata WHERE User_Id = 21";
             break;
+        case 'notifications':
+            $sql = "SELECT DISTINCT YEAR(Timestamp) AS year FROM notifications WHERE User_Id = 21";
+            break;
     }
 // $sql = "SELECT DISTINCT YEAR(Timestamp) AS year FROM transactionhistory WHERE User_Id = 21";
     $result = $conn->query($sql);
