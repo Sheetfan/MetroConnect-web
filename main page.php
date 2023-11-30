@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    session_start();
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +43,7 @@
             <h2 class="heading-name">Dashboard</h2>
             <a href="Personal Info.html">
                 <div class="user-info">
-                    <span>Commuter Name</span>
+                    <span><?php $_SESSION["userId"]?></span>
                     <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
             </a>

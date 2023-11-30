@@ -1,4 +1,5 @@
 <?php
+session_start();
     if(isset($_POST['email']) && isset($_POST['password'])){
         include("DB_connect.php");
         //* You should change the informaction depending on your database
@@ -38,8 +39,8 @@
 
         // this checks of the user exists
         if ($result->num_rows > 0) {
-            header("Location: ..\DashBoard.html");
-
+            header("Location: ..\main page.php");
+            $_SESSION["userId"] = $result;
         } else {
             header("Location: ..\Commuter Login Page.php?error=invalid");
         }
