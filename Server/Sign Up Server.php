@@ -21,7 +21,7 @@ include 'DB_connect.php';
         //Validate last name
         $lastName=trim($_POST['last_name']);
         if(empty($lastName)){
-            $lastName ='Please enter your first name.';
+            $lastNameErr ='Please enter your first name.';
         }else if(!ctype_alpha(str_replace(' ','', $lastName))){
             $lastNameErr = 'Last Name must contain only letters';
         }
@@ -130,6 +130,7 @@ include 'DB_connect.php';
             }
             return $password;
         }
+        
         $password = password_hash(generateRandomPassword(), PASSWORD_DEFAULT);
 
         if(empty($firstNameErr) && empty($lastNameErr) && empty($emailErr) && empty($genderErr) && empty($contactNumberErr) && empty($dobErr) && empty($commuterTypeErr)){
