@@ -3,14 +3,10 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /*
-        ?Does everyone know to to fix the background it doesn't show in the website anymore
-    */
-    background-image: url('../img/metrobus.jpg');
+    background: url('../img/metrobus.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: center;   
     align-items: center;
 }
 

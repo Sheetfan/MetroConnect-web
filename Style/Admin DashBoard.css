@@ -15,7 +15,7 @@ body, html {
 /* Sidebar Styles */
 .sidebar {
     background-color: #ffffff;
-    width: 250px;
+    width: 15.625rem;
     height: 100vh;
     padding: 20px;
     position: fixed;
