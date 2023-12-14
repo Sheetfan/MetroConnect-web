@@ -5,7 +5,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "metrobus";
+    $dbname = "metroconnect";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
