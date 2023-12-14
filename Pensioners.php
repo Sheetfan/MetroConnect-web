@@ -133,9 +133,9 @@
         </div>
     </div>
 
-    <script src="Edit_feature.js"></script>
-    <script src="history_handler.js"></script>
-    <script src="Delete_commuter.js"></script>
+    <script src="js/Edit_feature.js"></script>
+    <script src="js/history_handler.js"></script>
+    <script src="js/Delete_commuter.js"></script>
 
 </body>
 </html>

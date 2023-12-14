@@ -96,6 +96,6 @@
 </div>
 
 
-    <script src="Price.js"></script>
+    <script src="js/Price.js"></script>
 </body>
 </html>
